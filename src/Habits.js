@@ -4,7 +4,7 @@ import HabitItem from './HabitItem'
 function Habits(props) {
   return (
     <div id='habits-container' >
-      <h1>My Habits</h1>
+      <h3>My Habits</h3>
 
       {props.habits.length === 0 ? (
         "No Habits to display"
@@ -12,7 +12,7 @@ function Habits(props) {
         // Mapping over the Habits array and rendering HabitItem component for each contact
         props.habits.map((habit) => {
           return (
-            <HabitItem habit={habit} />
+            <HabitItem habit={habit} deleteHabit={props.deleteHabit} />
           )
         })
       )}
